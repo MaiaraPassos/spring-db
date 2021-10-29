@@ -30,9 +30,6 @@ public class UserDetails implements org.springframework.security.core.userdetail
                 .collect(Collectors.toList());
     }
 
-    public UserDetails(Object user) {
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;

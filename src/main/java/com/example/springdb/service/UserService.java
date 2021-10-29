@@ -1,6 +1,5 @@
 package com.example.springdb.service;
 
-
 import com.example.springdb.model.User;
 import com.example.springdb.model.UserDetails;
 import com.example.springdb.repository.UserRepository;
@@ -13,8 +12,10 @@ import java.util.Optional;
 
 @Service
 public class UserService implements UserDetailsService {
+
     @Autowired
     UserRepository userRepository;
+
     @Override
     public org.springframework.security.core.userdetails.UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         Optional<User> user = userRepository.findByUserName(userName);
